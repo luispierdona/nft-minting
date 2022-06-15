@@ -18,4 +18,15 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+
+  /*
+    This allows us to create a local network 
+    that we can use to deploy our contract
+  */
+  networks: {
+    hardhat: {
+      chainId: 1337,
+    }
+  }
+
 };
