@@ -2,6 +2,8 @@ import './App.css';
 import mintAbi from './mintAbi.json';
 import { ethers, BigNumber } from "ethers"; // Allow us to connect
 import { useEffect, useState } from "react";
+import Header from './components/topbar';
+import Body from './components/body';
 
 const mintAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
@@ -20,9 +22,9 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    connectAccounts();
-  }, []);
+  // useEffect(() => {
+  //   connectAccounts();
+  // }, []);
 
   /* MINTING PART */
   const [mintAmount, setMintAmount] = useState(1);
@@ -53,16 +55,18 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App" style={{ height: '900px' }}>
+      <Header />
       {/* If the user is connected then we show the BTN */}
-      {accounts.length && (
+      <Body />
+      {/* {accounts.length && (
         <div>
           <button onClick={() => setMintAmount(mintAmount - 1)}>-</button>
           {mintAmount}
           <button onClick={() => setMintAmount(mintAmount + 1)}>+</button>
           <button onClick={handleMint}>Mint</button>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
