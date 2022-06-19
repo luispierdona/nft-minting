@@ -49,7 +49,6 @@ const styles = {
 	}
 };
 
-// rounded button big
 const btnAddMinus = {
 	borderRadius: "50%",
 	backgroundColor: "transparent",
@@ -83,10 +82,8 @@ const MintBTN = () => {
 	}
 
 	useEffect(() => {
-	  // connectAccounts();
 		console.log(accounts);
 	}, [accounts]);
-
 
 	/* MINTING PART */
 	const [mintAmount, setMintAmount] = useState(1);
@@ -117,7 +114,6 @@ const MintBTN = () => {
 	}
 
 	return (
-		// <a style={styles}>CONNECT WALLET</a>
 		<>
 			{accounts.length === 0 ?
 				<a style={styles.connect} onClick={connectAccounts}>CONNECT WALLET</a>
