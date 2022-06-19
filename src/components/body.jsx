@@ -17,7 +17,7 @@ const Body = () => {
         </div>
 
         <div style={{ width: "60%", color: "white" }}>
-          <h1 style={{ fontSize: "70px" }}>WELCOME TO THE SMILESSSVRS</h1>
+          <h1 style={{ fontSize: "70px", marginBlockStart: "0em", marginBlockEnd: "0em" }}>WELCOME TO THE SMILESSSVRS</h1>
           <p style={{ padding: "15px" }}>{txt}</p>
           <MintBTN />
         </div>
